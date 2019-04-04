@@ -14,5 +14,7 @@ p2 = Program.create(days: 'T,W,S')
 
 #TODO :add scales
 
-Scale.create(airport:a1, program:p1, state:1, order:1) 
-Scale.create(airport:a2, program:p1, state:2, order:2) 
+sc1 = Scale.create(airport:a1, program:p1, state:1, order:1) 
+sc2 = Scale.create(airport:a2, program:p1, state:2, order:2) 
+
+f1 = Flight.create(program:p1, date:Date.new(), spaces:60) 

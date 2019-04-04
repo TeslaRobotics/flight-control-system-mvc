@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :airports, only: :index
   resources :programs, only: :index
   resources :scales, only: :index
+  resources :flights, only: :index
 
 
 end
