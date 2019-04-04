@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :programs, only: :index
   resources :scales, only: :index
   resources :flights, only: :index
-
+  resources :planes, only: :index
 
 end

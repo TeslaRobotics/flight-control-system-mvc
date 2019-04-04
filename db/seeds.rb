@@ -18,3 +18,5 @@ sc1 = Scale.create(airport:a1, program:p1, state:1, order:1)
 sc2 = Scale.create(airport:a2, program:p1, state:2, order:2) 
 
 f1 = Flight.create(program:p1, date:Date.new(), spaces:60) 
+
+Plane.create(model:"Boeing 007", capacity:100,  airline:"American Airlines", flight:f1) 
