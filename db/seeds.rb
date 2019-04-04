@@ -6,8 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Airport.create(name: 'MIA', city: 'Miami', country:'USA')
-Airport.create(name: 'ATL', city: 'Hartsfield–Jackson', country:'USA')
+a1 = Airport.create(name: 'MIA', city: 'Miami', country:'USA')
+a2 = Airport.create(name: 'ATL', city: 'Hartsfield–Jackson', country:'USA')
 
-Program.create(days: 'M,T,S')
-Program.create(days: 'T,W,S')
+p1 = Program.create(days: 'M,T,S')
+p2 = Program.create(days: 'T,W,S')
+
+#TODO :add scales
+
+Scale.create(airport:a1, program:p1, state:1, order:1) 
+Scale.create(airport:a2, program:p1, state:2, order:2) 
