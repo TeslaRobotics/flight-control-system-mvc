@@ -2,8 +2,9 @@
 
 # Independent tables
 
-rails g model Airport name:string city:string country:name
+rails g model Airport name:string city:string country:string
 rails g model Program days:string
+rails db:create
 rails db:migrate
 
 Add to config/routes.rb
