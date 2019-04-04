@@ -8,3 +8,6 @@
 
 Airport.create(name: 'MIA', city: 'Miami', country:'USA')
 Airport.create(name: 'ATL', city: 'Hartsfield–Jackson', country:'USA')
+
+Program.create(days: 'M,T,S')
+Program.create(days: 'T,W,S')
