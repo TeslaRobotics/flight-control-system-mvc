@@ -1,24 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Independent tables
 
-Things you may want to cover:
+rails g model Airport name:string city:string country:name
+rails g model Program days:string
+rails db:migrate
 
-* Ruby version
+Add to config/routes.rb
 
-* System dependencies
+resources :products, only: :index
 
-* Configuration
+touch app/controllers/products_controller.rb
 
-* Database creation
+class ProductsController < ApplicationController
+def index
+render json: Product.all
+end
+end
 
-* Database initialization
+# Dependent tables
 
-* How to run the test suite
+rails g model Scale airport:references program:references state:integer order:integer
 
-* Services (job queues, cache servers, search engines, etc.)
+Add enum
+class Scale < ActiveRecord::Base
+enum state: [ :origin, :destination, :technical ]
+end
 
-* Deployment instructions
+rails g model Flight program:references date:date spaces:integer
+rails g model Plane model:string capacity:integer airline:string flight:references
+rails db:migrate
 
-* ...
+# Add welcome page
+
+rails generate controller Welcome index
+
+# Add data to models
+
+rails db:seed
